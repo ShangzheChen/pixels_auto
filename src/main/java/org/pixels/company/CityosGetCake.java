@@ -29,14 +29,14 @@ public class CityosGetCake {
 
                 System.out.println("颜色：RGB(" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")");
                 robot.mouseMove(1133, 779); // 做蛋糕按钮
-
+//
                 if (color.getRed() >= 246 && color.getRed() <= 255) {
                     time = 0;
                     Date date = new Date();
                     System.out.println("颜色：RGB(" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")");
                     pressMouse(robot);
                     System.out.println(date);
-                } else if (time >= 5) {
+                } else if (time >= 65) {
                     Date date = new Date();
                     robot.mouseMove(1349, 270);
                     pressMouse(robot);
@@ -46,7 +46,16 @@ public class CityosGetCake {
                     pressMouse(robot);
                     System.out.println("打开做蛋糕界面   ：" + date);
                     Thread.sleep(2000);
+                    robot.mouseMove(749, 683);
+                    pressMouse(robot);
+                    System.out.println("去做胡萝卜派   ：" + date);
+                    Thread.sleep(2000);
                     time = 0;
+                }else if (color.getRed() == 211 && color.getGreen() == 188){
+                    robot.mouseMove(1019, 427);
+                    pressMouse(robot);
+                    System.out.println("进入游戏");
+                    Thread.sleep(10000);
                 }
             }
         } catch (AWTException | InterruptedException e) {
