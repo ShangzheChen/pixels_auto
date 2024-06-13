@@ -28,7 +28,7 @@ public class CityosGetCake {
                 System.out.println(time);
 
                 System.out.println("颜色：RGB(" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")");
-                robot.mouseMove(2085, 964); // 做蛋糕按钮
+                robot.mouseMove(1133, 779); // 做蛋糕按钮
 
                 if (color.getRed() >= 246 && color.getRed() <= 255) {
                     time = 0;
@@ -36,13 +36,13 @@ public class CityosGetCake {
                     System.out.println("颜色：RGB(" + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue() + ")");
                     pressMouse(robot);
                     System.out.println(date);
-                } else if (time >= 130) {
+                } else if (time >= 5) {
                     Date date = new Date();
-                    robot.mouseMove(2306, 453);
+                    robot.mouseMove(1349, 270);
                     pressMouse(robot);
                     System.out.println("时间超时，关闭做蛋糕界面   ：" + date);
                     Thread.sleep(2000);
-                    robot.mouseMove(2072, 1081);
+                    robot.mouseMove(1115, 718);
                     pressMouse(robot);
                     System.out.println("打开做蛋糕界面   ：" + date);
                     Thread.sleep(2000);
